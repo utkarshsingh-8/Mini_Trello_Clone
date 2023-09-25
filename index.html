@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Trello Clone</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="root">
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a href="#" class="navbar-link">🌮 Taco's Tacos</a></li>
+        <li class="navbar-item"><a href="#" class="navbar-link">👥 Team Visible</a></li>
+        <li class="navbar-item" id="show-menu-item"><a href="#" class="navbar-link">📄 Show Menu</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="resources" class="board-section">
+        <h2>Resources</h2>
+        <div class="cards-container">
+          <div class="card" draggable="true" ondragstart="drag(event)">Financials & Growth Data</div>
+          <div class="card" draggable="true" ondragstart="drag(event)">2017 Goals And KPIs</div>
+          <div class="card" draggable="true" ondragstart="drag(event)">Brand Guide</div>
+          <div class="card" draggable="true" ondragstart="drag(event)">Employee Manual</div>
+          <p onclick="addCard('resources')">Add a card...</p>
+        </div>
+      </section>
+
+      <section id="to-do" class="board-section" ondrop="drop(event, 'to-do')" ondragover="allowDrop(event)">
+        <h2>To Do</h2>
+        <div class="cards-container" id="to-do-container">
+          <div class="card" id="task1" draggable="true" ondragstart="drag(event)" contenteditable="true">Build A Better Burrito: 7 Layers To Success</div>
+          <div class="card" id="task2" draggable="true" ondragstart="drag(event)" contenteditable="true">Nacho Ordinary Birthday - Event Space Rentals</div>
+          <div class="card" id="task3" draggable="true" ondragstart="drag(event)" contenteditable="true">Taco Drone Delivery Service</div>
+          <div class="card" id="task4" draggable="true" ondragstart="drag(event)" contenteditable="true">Superbowl Ad-"Super Salad Bowls"<p>Dec 12</p></div>
+          <p onclick="addCard('to-do')">Add a card...</p>
+        </div>
+      </section>
+
+      <section id="doing" class="board-section" ondrop="drop(event, 'doing')" ondragover="allowDrop(event)">
+        <h2>Doing</h2>
+        <div class="cards-container" id="doing-container">
+          <p onclick="addCard('doing')">Add a card...</p>
+        </div>
+      </section>
+
+      <section id="done" class="board-section" ondrop="drop(event, 'done')" ondragover="allowDrop(event)">
+        <h2>Done</h2>
+        <div class="cards-container" id="done-container">
+          <p onclick="addCard('done')">Add a card...</p>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

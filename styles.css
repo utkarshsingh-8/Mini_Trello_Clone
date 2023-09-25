@@ -1,0 +1,73 @@
+.board-section {
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px;
+  display: inline-block; /* Display as inline-block to align columns */
+  vertical-align: top; /* Align columns at the top */
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align cards within each column */
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
+  width: 200px; /* Adjust card width if needed */
+}
+
+body {
+  background: linear-gradient(to bottom, #87ceeb, #007BFF); /* Smooth gradient from light blue to dark blue */
+  margin: 0; /* Remove default margin */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the navbar */
+.navbar {
+  background-color: #026aa7;
+  padding: 10px;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar-item {
+  margin-right: 10px;
+}
+
+.navbar-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#show-menu-item {
+  margin-left: auto; /* Push "Show Menu" to the right */
+}
+
+.navbar-link:first-child {
+  margin-left: 0;
+}
